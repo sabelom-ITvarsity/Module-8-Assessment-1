@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <form>
+            <h1>HELLO THERE PLEASE ADD LOGIN DEATAILS</h1>
+            <label for="usernameInput">USERNAME: </label><input type="text" id="usernameInput"></br>
+            <label for="passwordInput">PASSWORD: </label><input type="password" id="passwordInput"></br>
+            <p id="message"></p>
+            <a href="#" onclick="verify_user()">LOGIN</a>
+        </form>
+       
+        <script>
+
+            function verify_user(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+
+                checkuser_creds(username,password);
+            }
+
+            function checkuser_creds(username, password){
+                var systemUsername="Bond"
+                var systemPassword="007"
+
+                if(username == systemUsername && password == systemPassword){
+                    document.getElementById("message").innerHTML="Correct logging you in....";
+                }else{
+                    document.getElementById("message").innerHTML="Incorrect infomation please try again";
+                }
+            }
+
+        </script>
+    </body>
+</html>
